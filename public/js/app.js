@@ -30594,6 +30594,38 @@ var map = {
 	"./Home.vue": [
 		"./resources/js/Pages/Home.vue",
 		"resources_js_Pages_Home_vue"
+	],
+	"./Rifas/HomeRifas": [
+		"./resources/js/Pages/Rifas/HomeRifas.vue",
+		"resources_js_Pages_Rifas_HomeRifas_vue"
+	],
+	"./Rifas/HomeRifas.vue": [
+		"./resources/js/Pages/Rifas/HomeRifas.vue",
+		"resources_js_Pages_Rifas_HomeRifas_vue"
+	],
+	"./Rifas/PageDesktop": [
+		"./resources/js/Pages/Rifas/PageDesktop.vue",
+		"resources_js_Pages_Rifas_PageDesktop_vue"
+	],
+	"./Rifas/PageDesktop.vue": [
+		"./resources/js/Pages/Rifas/PageDesktop.vue",
+		"resources_js_Pages_Rifas_PageDesktop_vue"
+	],
+	"./Rifas/PageMobile": [
+		"./resources/js/Pages/Rifas/PageMobile.vue",
+		"resources_js_Pages_Rifas_PageMobile_vue"
+	],
+	"./Rifas/PageMobile.vue": [
+		"./resources/js/Pages/Rifas/PageMobile.vue",
+		"resources_js_Pages_Rifas_PageMobile_vue"
+	],
+	"./Rifas/Rifa": [
+		"./resources/js/Pages/Rifas/Rifa.vue",
+		"resources_js_Pages_Rifas_Rifa_vue"
+	],
+	"./Rifas/Rifa.vue": [
+		"./resources/js/Pages/Rifas/Rifa.vue",
+		"resources_js_Pages_Rifas_Rifa_vue"
 	]
 };
 function webpackAsyncContext(req) {
@@ -62905,7 +62937,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if (chunkId === "resources_js_Pages_Home_vue") return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_Pages_Home_vue":1,"resources_js_Pages_Rifas_HomeRifas_vue":1,"resources_js_Pages_Rifas_PageDesktop_vue":1,"resources_js_Pages_Rifas_PageMobile_vue":1,"resources_js_Pages_Rifas_Rifa_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

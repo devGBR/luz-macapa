@@ -1,57 +1,57 @@
 <template>
   <v-app id="inspire">
-    <v-navigation-drawer temporary v-model="drawer" style="background: rgb(243, 224, 190);">
+    <v-navigation-drawer temporary v-model="drawer" :style="backgroundDrawer">
       <div class="d-flex w-100 no-wrap flex-column mt-8 text-start">
         <v-list rounded="lg">
-          <v-list-item v-for="link in links" :key="link" link>
-            <v-list-item-title class="pl-5"
+          <v-list-item v-for="link in links" :href="link.link" :key="link" link>
+            <v-list-item-title class="pl-5" 
               style="font-weight: 500; letter-spacing: 0.0892857143em; line-height: normal; text-indent: 0.0892857143em; text-transform: uppercase; user-select: none;">
-              {{ link }}
+              {{ link.page}}
             </v-list-item-title>
           </v-list-item>
         </v-list>
       </div>
     </v-navigation-drawer>
 
-    <v-app-bar class="nav-hr" style="background: rgb(214, 192, 153);">
+<v-app-bar class="nav-hr" :style="backgroundBar">
       
       
       <v-container class="fill-height d-flex mx-auto justify-content-start w-100">
         <div class="w-25 h-100">
           <v-avatar style="width: 227px;
-    height: 80px;
+    height: 65px;
     position: fixed;
-    top: -11%;
+    top: -3%;
     left: 5%;"  rounded="0" >
-          <v-img src="img/logo-principal.png" >
+           <v-img :src="`/img/${imglogo}`">
 
 </v-img>
 </v-avatar>
         </div>
          
         <div class="d-flex w-50 mx-auto" style="margin-left: 5% !important;">
-        <v-btn v-for="link in links" :key="link" variant="text" class="text-nav">
-          {{ link }}
+        <v-btn v-for="link in links" :key="link" :href="link.link" variant="text" class="text-nav">
+          {{ link.page }}
         </v-btn>
       </div>
       </v-container>
 
     </v-app-bar>
     
-    <div class="side horizontal ">
+    <div class="side horizontal " :style="backgroundBar">
      
   </div>
-  <div class="header side">
+  <div class="header side" :style="backgroundBar">
       <div class="w-100 d-flex justify-content-center mt-2">
-        <v-avatar class="side"  style="width: 16vw;
+        <v-avatar class="side"  style="width: 15vw;
                 height: 15vw;">
-              <v-img  src="img/logo.png" class="w-100"></v-img>  
+              <v-img  src="/img/logo.png" class="w-100"></v-img>  
               </v-avatar>
       </div>
       <div class="w-100 h-50  d-flex">
         <div class="d-flex w-50">
           <button class="ml-1 mr-4 side h-100" style="width: 20vw;">
-            <v-img @click="drawer = !drawer" src="img/sideicon.png" class="w-100"></v-img>
+            <v-img @click="drawer = !drawer" src="/img/sideicon.png" class="w-100"></v-img>
           </button>
           <v-avatar class="mt-2 side" color="grey-darken-1" style="width: 18vw;
     height: 18vw;
@@ -65,13 +65,13 @@
       </div>
     </div>
 
-    <v-main class="tm" style="background-image: linear-gradient(1deg, rgb(203 194 169), rgb(214 192 153 / 75%)); ">
+    <v-main class="tm" :style="backgroundMain">
       <div class="space side"></div>
       <slot />
     </v-main>
     <v-footer
     class=" text-center d-flex flex-column"
-    style="background-color: #F3F2D2;"  
+    :style="backgroundFooter"  
     >
     <div>
       <v-btn
@@ -102,8 +102,26 @@
 .tm{
   height: 100%
 }
+.navicon{
+    display: none;
+  }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 705px) { 
+  .text-nav {
+    display: none;
+  }
+  .navicon{
+    display: flex;
+    width: 87px;
+    scale: -1 1;
+    position: fixed;
+    top: 10px;
+    right: -13px;
+
+  }
+}
+
+@media only screen and (max-width: 500px) {
 
   .space{
     z-index: 1;
@@ -174,6 +192,13 @@
 import { Inertia } from '@inertiajs/inertia';
 import { Head, Link } from '@inertiajs/inertia-vue3';
 export default {
+  props: {
+    backgroundMain: String,
+    backgroundBar: String,
+    backgroundDrawer: String,
+    backgroundFooter: String,
+    imglogo: String,
+  },
   components: {
     Head,
     Link
@@ -182,11 +207,11 @@ export default {
     return {
       drawer: false,
       links: [
-        'Home',
-        'Eventos',
-        'Ministerios',
-        'Rifas',
-        'Agenda'
+        {page: 'Home', link: '/'},
+        {page: 'Eventos'},
+        {page: 'Ministerios'},
+        {page: 'Rifas', link: '/rifas'},
+        {page: 'Agenda'}
       ],
       icons: [
         'mdi-facebook',

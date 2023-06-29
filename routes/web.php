@@ -17,3 +17,9 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render('Home');
 });
+Route::get('/rifas', function() {
+    return Inertia::render('Rifas/HomeRifas');
+});
+Route::get('/rifa/1', function() {
+    return Inertia::render('Rifas/Rifa.vue');
+});
