@@ -57,15 +57,23 @@ export default {
         return {
             model: null,
             colorBar: 'Background: transparent;',
-            Logo: 'LogoRifa.png'
+            Logo: 'LogoRifa.png',
+            larguraHome: '',
         }
     },
     mounted() {
-        let largura = window.screen.width;
+        this.larguraHome = window.screen.width;
+        if(this.larguraHome > 501){
         window.addEventListener('scroll', this.scrollHandler);
+    }else{
+            
+            this.colorBar = 'background: rgb(214, 192, 153);'
+        }
+        console.log(this.larguraHome)
     },
     methods: {
         scrollHandler() {
+            
             if (window.scrollY > 0) {
                 this.colorBar = 'background: rgb(214, 192, 153); z-index: 2;     box-shadow: 0px 2px 4px -1px var(--v-shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)), 0px 4px 5px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)), 0px 1px 10px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.12));'; // Defina a cor desejada quando o scroll for maior que 0
                 this.Logo = 'MACAPÁ.png'

@@ -76,12 +76,18 @@ __webpack_require__.r(__webpack_exports__);
     return {
       model: null,
       colorBar: 'Background: transparent;',
-      Logo: 'LogoRifa.png'
+      Logo: 'LogoRifa.png',
+      larguraHome: ''
     };
   },
   mounted: function mounted() {
-    var largura = window.screen.width;
-    window.addEventListener('scroll', this.scrollHandler);
+    this.larguraHome = window.screen.width;
+    if (this.larguraHome > 501) {
+      window.addEventListener('scroll', this.scrollHandler);
+    } else {
+      this.colorBar = 'background: rgb(214, 192, 153);';
+    }
+    console.log(this.larguraHome);
   },
   methods: {
     scrollHandler: function scrollHandler() {
