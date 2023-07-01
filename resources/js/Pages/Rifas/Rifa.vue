@@ -1,5 +1,5 @@
 <template>
-    <LayoutAuth backgroundFooter="background-color: #F3F2D2; " backgroundDrawer="background: rgb(243, 224, 190);" backgroundBar="background: rgb(214, 192, 153);" backgroundMain="background-image: linear-gradient(1deg, rgb(203 194 169), rgb(214 192 153 / 75%));" >
+    <LayoutAuth backgroundFooter="background-color: #F3F2D2; " imglogo="MACAPÁ.png" backgroundDrawer="background: rgb(243, 224, 190);" backgroundBar="background: rgb(214, 192, 153);" backgroundMain="background-image: linear-gradient(1deg, rgb(203 194 169), rgb(214 192 153 / 75%));" >
         <v-responsive class="overflow-y-auto h-100vh">
 
             <v-card class="card mx-auto mt-8 rounded-xl d-flex flex-wrap" style="background-color: #FFF5E2;">

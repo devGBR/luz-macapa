@@ -328,6 +328,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_LayoutAuth = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("LayoutAuth");
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_LayoutAuth, {
     backgroundFooter: "background-color: #F3F2D2; ",
+    imglogo: "MACAPÁ.png",
     backgroundDrawer: "background: rgb(243, 224, 190);",
     backgroundBar: "background: rgb(214, 192, 153);",
     backgroundMain: "background-image: linear-gradient(1deg, rgb(203 194 169), rgb(214 192 153 / 75%));"
