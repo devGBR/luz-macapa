@@ -674,10 +674,6 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_v_slide_group, {
-        modelValue: _ctx.model,
-        "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
-          return _ctx.model = $event;
-        }),
         "prev-icon": "mdi-chevron-left-circle",
         "next-icon": "mdi-chevron-right-circle",
         "class": "pa-4 text-center",
@@ -690,12 +686,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
               key: n,
               "class": "mx-auto d-flex justify-center"
             }, {
-              "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function (_ref) {
-                var isSelected = _ref.isSelected;
+              "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
                 return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_v_card, {
                   onClick: $options.handleLinkClick,
                   href: $data.link,
-                  color: isSelected ? 'primary' : 'grey-lighten-1',
                   "class": "ma-4",
                   elevation: "8",
                   height: "310",
@@ -759,7 +753,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
                     }, 1032 /* PROPS, DYNAMIC_SLOTS */, ["style"])])];
                   }),
                   _: 2 /* DYNAMIC */
-                }, 1032 /* PROPS, DYNAMIC_SLOTS */, ["onClick", "href", "color"])];
+                }, 1032 /* PROPS, DYNAMIC_SLOTS */, ["onClick", "href"])];
               }),
               _: 2 /* DYNAMIC */
             }, 1024 /* DYNAMIC_SLOTS */);
@@ -767,8 +761,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         }),
 
         _: 1 /* STABLE */
-      }, 8 /* PROPS */, ["modelValue"])];
+      })];
     }),
+
     _: 1 /* STABLE */
   }, 8 /* PROPS */, ["max-width"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_v_alert, {
     style: {
@@ -914,7 +909,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.dinF {\r\n    position: absolute;\r\n    left: 94px;\r\n    top: 59px;\r\n    width: 336px !important;\r\n    transform: rotate(27deg);\r\n    animation: transicao 8s infinite;\n}\n.DinCaindo {\r\n    position: absolute;\r\n\r\n    left: 0;\r\n    width: 229px;\r\n    height: 199px;\r\n    transform: rotate(26deg);\n}\n.logoLoad {\r\n    width: 25%;\r\n    animation: loading 3s infinite linear;\r\n    -webkit-filter: drop-shadow(0px 0px 2px #999);\n}\n@keyframes loading {\n50% {\r\n        width: 30%;\r\n        -webkit-filter: drop-shadow(0px 0px 5px #999);\n}\n}\n@keyframes transicao {\n50% {\r\n        position: absolute;\r\n        left: 132px;\r\n        top: -10px;\r\n        /* height: 317px; */\r\n        width: 500px;\r\n        transform: rotate(37deg);\n}\n100% {\r\n        position: absolute;\r\n        left: 94px;\r\n        top: 59px;\r\n        width: 336px !important;\r\n        transform: rotate(27deg);\n}\n}\n@keyframes caindo {\n10% {\r\n        position: absolute;\r\n        top: 0;\r\n        width: 229px;\r\n        height: 199px;\r\n        transform: rotate(21deg);\n}\n20% {\r\n        position: absolute;\r\n        top: 0;\r\n        width: 229px;\r\n        height: 199px;\r\n        transform: rotate(10deg);\n}\n40% {\r\n        position: absolute;\r\n        top: 45px;\r\n        left: -30px;\r\n        width: 229px;\r\n        height: 199px;\r\n        transform: rotate(3deg);\n}\n50% {\r\n        position: absolute;\r\n        top: 100px;\r\n        left: -7px;\r\n        width: 229px;\r\n        height: 199px;\r\n        transform: rotate(15deg);\n}\n60% {\r\n        position: absolute;\r\n        top: 152px;\r\n        left: 2px;\r\n        width: 229px;\r\n        height: 199px;\r\n        transform: rotate(30deg);\n}\n70% {\r\n        position: absolute;\r\n        top: 210px;\r\n        left: 2px;\r\n        width: 229px;\r\n        height: 199px;\r\n        transform: rotate(60deg);\n}\n80% {\r\n        position: absolute;\r\n        top: 232px;\r\n        left: -15px;\r\n        width: 229px;\r\n        height: 199px;\r\n        transform: rotate(20deg);\n}\n90% {\r\n        position: absolute;\r\n        top: 286px;\r\n        left: -40px;\r\n        width: 229px;\r\n        height: 199px;\r\n        transform: rotate(1deg);\n}\n100% {\r\n        position: absolute;\r\n        top: 427px;\r\n        left: -40px;\r\n        width: 229px;\r\n        height: 199px;\r\n        transform: rotate(26deg);\n}\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.dinF {\r\n    position: absolute;\r\n    left: 94px;\r\n    top: 59px;\r\n    width: 336px !important;\r\n    transform: rotate(27deg);\r\n    animation: transicao 8s infinite;\n}\n.DinCaindo {\r\n    position: absolute;\r\n\r\n    left: 0;\r\n    width: 229px;\r\n    height: 199px;\r\n    transform: rotate(26deg);\n}\n.logoLoad {\r\n    width: 25%;\r\n    animation: loading 3s infinite linear;\r\n    -webkit-filter: drop-shadow(0px 0px 2px #999);\n}\n@keyframes loading {\n50% {\r\n        width: 30%;\r\n        -webkit-filter: drop-shadow(0px 0px 5px #999);\n}\n}\n@keyframes transicao {\n50% {\r\n        position: absolute;\r\n        left: 132px;\r\n        top: -10px;\r\n        /* height: 317px; */\r\n        width: 500px;\r\n        transform: rotate(37deg);\n}\n100% {\r\n        position: absolute;\r\n        left: 94px;\r\n        top: 59px;\r\n        width: 336px !important;\r\n        transform: rotate(27deg);\n}\n}\n@keyframes caindo {\n10% {\r\n        position: absolute;\r\n        top: 0;\r\n        width: 229px;\r\n        height: 199px;\r\n        transform: rotate(21deg);\n}\n20% {\r\n        position: absolute;\r\n        top: 0;\r\n        width: 229px;\r\n        height: 199px;\r\n        transform: rotate(10deg);\n}\n40% {\r\n        position: absolute;\r\n        top: 45px;\r\n        left: -30px;\r\n        width: 229px;\r\n        height: 199px;\r\n        transform: rotate(3deg);\n}\n50% {\r\n        position: absolute;\r\n        top: 100px;\r\n        left: -7px;\r\n        width: 229px;\r\n        height: 199px;\r\n        transform: rotate(15deg);\n}\n60% {\r\n        position: absolute;\r\n        top: 152px;\r\n        left: 2px;\r\n        width: 229px;\r\n        height: 199px;\r\n        transform: rotate(30deg);\n}\n70% {\r\n        position: absolute;\r\n        top: 210px;\r\n        left: 2px;\r\n        width: 229px;\r\n        height: 199px;\r\n        transform: rotate(60deg);\n}\n80% {\r\n        position: absolute;\r\n        top: 232px;\r\n        left: -15px;\r\n        width: 229px;\r\n        height: 199px;\r\n        transform: rotate(20deg);\n}\n90% {\r\n        position: absolute;\r\n        top: 286px;\r\n        left: -40px;\r\n        width: 229px;\r\n        height: 199px;\r\n        transform: rotate(1deg);\n}\n100% {\r\n        position: absolute;\r\n        top: 427px;\r\n        left: -40px;\r\n        width: 229px;\r\n        height: 199px;\r\n        transform: rotate(26deg);\n}\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

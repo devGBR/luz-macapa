@@ -23,10 +23,12 @@
                                         style="font-family: 'Oswald'; color: white; font-weight: bold; letter-spacing: 1px;">
                                         PREMIADO</div>
                                     <div class="text-center w-75 h-100 d-flex flex-column align-center pl-3 mt-5">
-                                        <v-btn block rounded="xl" class="mb-4" elevation="8" color="white" min-width="30" @click="handleLinkClick"
+                                        <v-btn block rounded="xl" class="mb-4" elevation="8" color="white" min-width="30"
+                                            @click="handleLinkClick"
                                             style="text-transform: lowercase; width: 128px !important; min-width: 30px !important; font-family: 'TT Norms'; font-size: 13px; font-weight: 800;">Compre
                                             Agora</v-btn>
-                                        <v-btn block rounded="xl" class="mb-4" elavation="0" min-width="30" @click="handleLinkClick"
+                                        <v-btn block rounded="xl" class="mb-4" elavation="0" min-width="30"
+                                            @click="handleLinkClick"
                                             style="min-width: 30px !important; width: 180px !important; background: rgb(255 255 255 / 50%); color: black !important; text-transform: uppercase; letter-spacing: 0; font-family: 'TT Norms'; font-size: 13px; font-weight: bold;">venha
                                             concorrer</v-btn>
                                     </div>
@@ -67,20 +69,16 @@
         <div class="w-100 d-flex mt-4">
             <v-sheet class="mx-auto my-5 w-100 d-flex justify-center" elevation="0" :max-width="largura"
                 style="background-image: linear-gradient(1deg, rgb(206 196 171), rgb(214 201 174));">
-                <v-slide-group v-model="model" prev-icon="mdi-chevron-left-circle" next-icon="mdi-chevron-right-circle"
+                <v-slide-group prev-icon="mdi-chevron-left-circle" next-icon="mdi-chevron-right-circle"
                     class="pa-4 text-center" center-active show-arrows>
 
-                    <v-slide-group-item v-for="n in sorteios" :key="n" v-slot="{ isSelected }"
-                        class="mx-auto d-flex justify-center">
-                        <v-card @click="handleLinkClick" :href="link" :color="isSelected ? 'primary' : 'grey-lighten-1'"
-                            class="ma-4" elevation="8" height="310"
+                    <v-slide-group-item v-for="n in sorteios" :key="n" class="mx-auto d-flex justify-center">
+                        <v-card @click="handleLinkClick" :href="link" class="ma-4" elevation="8" height="310"
                             style=" background-color: rgb(154 206 209) !important; border-top-left-radius: 16px; border-top-right-radius: 16px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;"
                             width="200">
 
                             <div class="d-flex fill-height flex-column align-center justify-center">
-                                <v-img :src="`/img/slides/${n.slides}`" style="height: 14vh; border: 3px solid rgb(191 236 240);
-    border-radius: 16px 16px 0px 0px;
-    border-bottom: none;" cover></v-img>
+                                <v-img :src="`/img/slides/${n.slides}`" style="height: 14vh; border: 3px solid rgb(191 236 240);  border-radius: 16px 16px 0px 0px;  border-bottom: none;" cover></v-img>
 
                                 <v-card-title
                                     style="font-family: 'Lato' !important; font-weight: bold; color: white; letter-spacing: 0.155em; line-height: 30px; font-size: 18px;">
@@ -103,15 +101,19 @@
             </v-sheet>
         </div>
         <div class="w-100 px-3 pr-4">
-            <v-alert style="background: linear-gradient(45deg, #06ffc7, #8812ff) !important; z-index: 2;" theme="light" elevation="8" prepend-icon="/img/logo.png" prominent>
-                <v-card-title style="font-family: 'Oswald' !important; color: white; font-size: 30px"  class="w-100 text-center">
-                     DESCRIÇÂO
+            <v-alert style="background: linear-gradient(45deg, #06ffc7, #8812ff) !important; z-index: 2;" theme="light"
+                elevation="8" prepend-icon="/img/logo.png" prominent>
+                <v-card-title style="font-family: 'Oswald' !important; color: white; font-size: 30px"
+                    class="w-100 text-center">
+                    DESCRIÇÂO
                 </v-card-title>
 
             </v-alert>
-            <v-alert color="white" theme="light" prepend-icon="/img/logo.png" elevation="0" rounded="0" style="width: calc(100% - 10px); margin: 0 auto" prominent>
-                <v-card-title style="font-family: 'Oswald' !important; color: white; font-size: 30px"  class="w-100 text-center">
-                     DESCRIÇÂO
+            <v-alert color="white" theme="light" prepend-icon="/img/logo.png" elevation="0" rounded="0"
+                style="width: calc(100% - 10px); margin: 0 auto" prominent>
+                <v-card-title style="font-family: 'Oswald' !important; color: white; font-size: 30px"
+                    class="w-100 text-center">
+                    DESCRIÇÂO
                 </v-card-title>
 
             </v-alert>
@@ -292,5 +294,4 @@ export default {
         height: 199px;
         transform: rotate(26deg);
     }
-}
-</style>
+}</style>
